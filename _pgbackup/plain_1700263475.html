@@ -8,7 +8,7 @@
         <meta name="author" content=""> 
         <title>New page</title>         
         <link href="css/style.css" rel="stylesheet"> 
-        <style>.fade-in-box { opacity: 0; transform: translateY(20px); transition: opacity 2s ease, transform 2s ease; }</style>
+        <style>.fade-in-box { transition: opacity 1s ease; opacity: 0.5; } .fade-in-box:hover { opacity: 1; }</style>
     </head>     
     <body style="background-image: url('https://mezcaleando.vercel.app/img/20862.jpg');">
         <div style="justify-content: center; display: inline-flex; left: 0px; top: 0px; bottom: 0px; right: 0px; padding: 0px; margin: 0px; flex-wrap: wrap;">
@@ -30,28 +30,5 @@
             </div>
             <img class="fade-in-box" src="https://mezcaleando.vercel.app/img/Frame-1.png" style="width: 100%;"> 
         </div>
-        <script>
-        function fadeInOnScroll(element) {
-            var elements = document.querySelectorAll(element);
-            var windowHeight = window.innerHeight;
-
-            function checkPosition() {
-                for (var i = 0; i < elements.length; i++) {
-                    var element = elements[i];
-                    var position = element.getBoundingClientRect();
-
-                    if (position.top < windowHeight) {
-                        element.style.opacity = "1";
-                        element.style.transform = "translateY(0)";
-                    }
-                }
-            }
-
-            window.addEventListener('scroll', checkPosition);
-            checkPosition();
-        }
-
-        fadeInOnScroll('.fade-in-box');
-    </script>
     </body>     
 </html>
